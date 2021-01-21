@@ -1,0 +1,110 @@
+:root {
+  --vermelho:#E50914;
+  --preto:#141414;
+}
+
+/*  reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* menu superior */
+body {
+  background-color: var(--preto);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+  margin: 0 3rem;
+}
+
+header .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3rem;
+  min-width: 300px;
+}
+
+header .logo {
+  color: var(--vermelho);
+  font-weight: bold;
+  position: absolute;
+}
+
+.menu-superior {
+  margin-left: 9rem;
+}
+
+.menu-superior a, .menu-superior-direito a, .hamb a{
+  text-decoration: none;
+  color: #aaa;
+  margin-right: 0.5rem;
+}
+
+.menu-superior a:hover, .menu-superior-direito a:hover, .hamb a:hover{
+  color: white;
+}
+
+/* banner */
+.banner{
+  background-image: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url("/img/capa-house.jpg");
+  background-size: cover;
+  height: 480px;
+  display: flex;
+  align-items: center;
+}
+
+.titulo-banner{
+  font-size: 35px;
+  margin-bottom: 1rem;
+}
+
+main .container{
+  color: white;
+  width: 60%;
+  min-width: 240px;
+}
+
+.button-watch, .button-info{
+  cursor: pointer;
+  margin-right: 5px;
+  margin-top: 0.8rem;
+  padding: 3px;
+}
+
+.button-watch i, .button-info i{
+  margin-right: 0.5rem;
+}
+
+.tittle-carousel {
+  color: white;
+  align-self: flex-end;
+  position: absolute;
+  margin-left: 3rem;
+  margin-bottom: 5px;
+}
+
+.hamb{
+  display: none;
+  color: #aaa;
+}
+
+@media screen and (max-width: 720px) {
+  .menu-superior {
+    display: none;
+  } 
+
+  header .container{
+    justify-content: space-between;
+    height:4rem;
+  }
+
+  .hamb{
+    display: flex;
+    margin-left: 8rem;
+  }
+
+}
